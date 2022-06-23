@@ -11,4 +11,41 @@
     <h1>Voy a practicar las branch</h1>
     <p> Este es un parrafo que solo aparecera en la branch de 1111111111 ramaParrafo</p>
     <p>Ahora si este es un nuevo parrafo solo para ver si podemos subir la rama a gitHub</p>
+
+    <h1>Mi reproductor de video</h1>
+    <!-- Con controles predeterminados -->
+    <!-- <video width="320" height="240" controls>
+        <source src="/1.mp4" type="video/mp4">
+    </video> -->
+
+    <!-- Controles personalizados -->
+    <video width="320" height="240" id="video1">
+        <source src="/1.mp4" type="video/mp4">
+    </video>
+    <div>
+        <button onclick="playPause()">&#9658;||</button>
+        <button onclick="stop()">&#9726;||</button>
+        <button onclick="skip(-10)">&lt;&lt;||</button>
+        <button onclick="skip(-10)">&gt;&gt;||</button>
+
+    </div>
+    <script>
+        var miVideo = document.getElementById("video1");
+        function playPause(){
+            if(miVideo.paused)
+                miVideo.play();
+            else
+                miVideo.pause()
+        }
+        function stop(){
+            miVideo.pause();
+            miVideo.currentTime = 0;
+        }
+        function skip(value){
+            miVideo.currentTime += value;
+        }
+    </script>
+
+  <!-- Flexbox -->
+
 </html>
